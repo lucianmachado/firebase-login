@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Login Firebase</title>
+  <style>
+    #informacoes {
+      margin-top: 150px;
+      margin-left: 20%;
+      margin-right: 20%;
+      padding: 100px;
+      background-color: #33101011;
+      position: relative;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #logout {
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    #logout button {
+      padding: 10px 30px 10px;
+      border-radius: 7px;
+      border: none;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+    }
+    #logout button:hover {
+      background-color:cadetblue
+    }
+    img{
+      position: absolute;
+      top: 10%;
+      left: 2%;
+      border-radius: 360px;
+      width: 80px;
+      height: auto;
+    }
+  </style>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="hidden" id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+
+    <div id="informacoes">
+      <div id="user-info"></div>
+      <div id="logout"><button onclick="logout()">Sair</button></div>
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>
